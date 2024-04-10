@@ -15,6 +15,7 @@ const popup = new mapboxgl.Popup({
     offset: 24,
     anchor: 'bottom'
 }).setText(
+    `Located in: ${bookstoredata.location}`
     `Emily goes here for ${bookstoredata.specialize}`
 );
 

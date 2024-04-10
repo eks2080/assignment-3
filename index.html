@@ -22,29 +22,30 @@
     </style>
 </head>
 
-<body>
-    <div id="map"></div>
-    <div class='map-overlay' id='legend'></div>
-        <h2>Emily's Favorite Bookstores in NYC</h2>
-        <div id='pd'>
-            <p>Click on the marker to learn more!</p>
-        </div>
+<div id="sidebar">
+    <div class="header">
+        <h1>Emily's Favorite Bookstores in NYC</h1>
+    </div>
+    <p>Click on the marker to learn more about each store!</p>
+    <div class="legend">
+        <a class="source-code-link" href="https://github.com/eks2080/assignment-3">Source Code</a>
     </div>
 
-    <script>
-        mapboxgl.accessToken = 'pk.eyJ1IjoiZWtzMjA4MCIsImEiOiJjbHVsdWNmbTExNGg0MmtsZHVlOHN2Zzd5In0.wEYw-sKV39S4NkqO8CDQBw';
-        const map = new mapboxgl.Map({
-            container: 'map', // container ID
-            center: [-73.984603, 40.703371], // starting position [lng, lat]
-            zoom: 10 // starting zoom
-        });
-    </script>
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZWtzMjA4MCIsImEiOiJjbHVsdWNmbTExNGg0MmtsZHVlOHN2Zzd5In0.wEYw-sKV39S4NkqO8CDQBw';
+    const map = new mapboxgl.Map({
+        container: 'map', // container ID
+        center: [-73.984603, 40.703371], // starting position [lng, lat]
+        zoom: 10 // starting zoom
+    });
+</script>
+</div>
 
-    </div>
-    <div id="map-container"></div>
-    <script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
-    <script src="js/bookstoredata.js"></script>
-    <script src="js/scripts.js"></script>
+</div>
+<div id="map-container"></div>
+<script src="https://api.mapbox.com/mapbox-gl-js/v3.2.0/mapbox-gl.js"></script>
+<script src="js/bookstoredata.js"></script>
+<script src="js/scripts.js"></script>
 
 </body>
 
