@@ -22,7 +22,7 @@ body {
   padding: 10px;
 }
 
-/* #sidebar {
+#sidebar {
   position: absolute;
   top: 20px;
   left: 20px;
@@ -58,7 +58,7 @@ body {
 #sidebar .source-code-link:hover {
   text-decoration: underline;
   font-size: 10px;
-} */
+} 
 
 /* legend styles from https://docs.mapbox.com/help/tutorials/choropleth-studio-gl-pt-1/ */
 /* .legend {
