@@ -21,9 +21,7 @@ bookstoredata.forEach(function (bookstoreRecord) {
     var color
 
     // use if statements to assign colors based on neighborhood
-    if (bookstoreRecord.location === 'Professor') {
-        color = '#8dd6a1'
-    }
+
     if (bookstoreRecord.location === 'Cobble Hill') {
         color = '#d67ea6'
     }

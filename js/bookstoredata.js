@@ -1,4 +1,4 @@
-var bookstoreRecord = [
+var bookstoredata = [
     {
         "Name": "Books Are Magic",
         "Location": "Cobble Hill",
