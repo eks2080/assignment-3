@@ -22,22 +22,22 @@ bookstoredata.forEach(function (bookstoreRecord) {
 
     // use if statements to assign colors based on neighborhood
 
-    if (bookstoreRecord.location === 'Cobble Hill') {
+    if (bookstoreRecord.Location === 'Cobble Hill') {
         color = '#d67ea6'
     }
-    if (bookstoreRecord.location === 'Lower East Side') {
+    if (bookstoreRecord.Location === 'Lower East Side') {
         color = '#1f8f39'
     }
-    if (bookstoreRecord.location === 'Chinatown') {
+    if (bookstoreRecord.Location === 'Chinatown') {
         color = '#8f5b1f'
     }
-    if (bookstoreRecord.location === 'Seaport') {
+    if (bookstoreRecord.Location === 'Seaport') {
         color = '#8A2BE2'
     }
-    if (bookstoreRecord.location === 'Upper West Side') {
+    if (bookstoreRecord.Location === 'Upper West Side') {
         color = '#6495ED'
     }
-    if (bookstoreRecord.location === 'Downtown Brooklyn') {
+    if (bookstoreRecord.Location === 'Downtown Brooklyn') {
         color = '#00008B'
     }
 
@@ -47,7 +47,7 @@ bookstoredata.forEach(function (bookstoreRecord) {
         offset: 24,
         anchor: 'bottom'
     }).setText(
-        `${bookstoreRecord.Name} located in: ${bookstoreRecord.Location}. Emily goes here for ${bookstoreRecord.specialize}`
+        `${bookstoreRecord.Name} is located in ${bookstoreRecord.Location}. Emily goes here for ${bookstoreRecord.specialize}.`
     );
     // const popup = new mapboxgl.Popup({
     //     offset: 24,
