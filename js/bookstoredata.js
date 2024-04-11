@@ -25,14 +25,14 @@ var bookstoredata = [
         "Location": "Seaport",
         "Longitude": -74.00357521,
         "Latitude": 40.70650574,
-        "specialize": "Country-specific books"
+        "specialize": "International Fiction"
     },
     {
         "Name": "Book Culture",
         "Location": "Upper West Side",
         "Longitude": -73.96494656,
         "Latitude": 40.80497485,
-        "specialize": "Used books"
+        "specialize": "Used Books"
     },
     {
         "Name": "Greenlight Bookstore",

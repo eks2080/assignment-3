@@ -47,8 +47,8 @@ bookstoredata.forEach(function (bookstoreRecord) {
     const popup = new mapboxgl.Popup({
         offset: 24,
         anchor: 'bottom'
-    }).setText(
-        `${bookstoreRecord.Name} is located in ${bookstoreRecord.Location}. Emily goes here for ${bookstoreRecord.specialize}.`
+    }).setHTML(
+        `<strong>${bookstoreRecord.Name}</strong> is located in <strong>${bookstoreRecord.Location}</strong>. Emily goes here for <strong>${bookstoreRecord.specialize}</strong>.`
     );
 
     // create a marker, set the coordinates, add the popup, add it to the map

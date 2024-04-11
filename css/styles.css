@@ -28,7 +28,7 @@ body {
   left: 20px;
   z-index: 1;
   width: 450px;
-  background: #dee0de;
+  background: #57a2db;
   padding: 10px;
   border-radius: 15px;
 }
@@ -36,18 +36,19 @@ body {
 #sidebar h1 {
   font-size: 24px;
   text-align: center;
-  color: #083d0a;
+  color: #ffffff;
+  letter-spacing: 3px;
 }
-  #sidebar p {
-    font-size: 15.5px;
-    text-align: center;
-    padding: 10px;
-    /* box-shadow: 0 1px 2px rgb(0 0 0 / 10%); */
-    line-height: 10px;
-    margin-bottom: 10px;
-    /* border: 1px solid #ccc; */
-    background: white;
-    border-radius: 1px;
+
+#sidebar p {
+  font-size: 15.5px;
+  text-align: left;
+  /* padding: 10px; */
+  /* box-shadow: 0 1px 2px rgb(0 0 0 / 10%); */
+  line-height: 22px;
+  margin-bottom: 10px;
+  color: white;
+  /* border-radius: 1px; */
 }
 
 #sidebar .header {
@@ -56,7 +57,11 @@ body {
 
 #sidebar .source-code-link {
   text-decoration: none;
-  font-size: 15px;
+  font-size: 12px;
+  color: #ffffff;
+  line-height: 10px;
+  margin-bottom: 1px;
+  text-decoration-line: underline;
 }
 
 /* #sidebar .source-code-link:hover {
