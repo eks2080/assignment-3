@@ -4,8 +4,9 @@ mapboxgl.accessToken = 'pk.eyJ1IjoiZWtzMjA4MCIsImEiOiJjbHVsdWNmbTExNGg0MmtsZHVlO
 
 var mapOptions = {
     container: 'map-container', // container ID
-    center: [-73.984603, 40.703371], // starting position [lng, lat]
-    zoom: 10, // starting zoom,
+    style: 'mapbox://styles/mapbox/light-v11', // style URL
+    center: [-74.00011310930516, 40.72415607434748], // starting position [lng, lat]
+    zoom: 11, // starting zoom,
 }
 
 // instantiate the map
@@ -23,22 +24,22 @@ bookstoredata.forEach(function (bookstoreRecord) {
     // use if statements to assign colors based on neighborhood
 
     if (bookstoreRecord.Location === 'Cobble Hill') {
-        color = '#d67ea6'
+        color = '#9932CC'
     }
     if (bookstoreRecord.Location === 'Lower East Side') {
-        color = '#1f8f39'
+        color = '#556B2F'
     }
     if (bookstoreRecord.Location === 'Chinatown') {
-        color = '#8f5b1f'
+        color = '#483D8B'
     }
     if (bookstoreRecord.Location === 'Seaport') {
-        color = '#8A2BE2'
+        color = '#E9967A'
     }
     if (bookstoreRecord.Location === 'Upper West Side') {
-        color = '#6495ED'
+        color = '#B8860B'
     }
     if (bookstoreRecord.Location === 'Downtown Brooklyn') {
-        color = '#00008B'
+        color = '#4169E1'
     }
 
     // create a popup to attach to the marker
@@ -49,17 +50,10 @@ bookstoredata.forEach(function (bookstoreRecord) {
     }).setText(
         `${bookstoreRecord.Name} is located in ${bookstoreRecord.Location}. Emily goes here for ${bookstoreRecord.specialize}.`
     );
-    // const popup = new mapboxgl.Popup({
-    //     offset: 24,
-    //     anchor: 'bottom'
-    // }).setText(
-    //     `${bookstoreRecord.name} is located in: ${bookstoreRecord.location} a`
-    //         `Emily goes here for ${bookstoreRecord.specialize}`
-    // );
 
     // create a marker, set the coordinates, add the popup, add it to the map
     new mapboxgl.Marker({
-        scale: 0.65,
+        scale: 0.75,
         color: color,
     })
         .setLngLat([bookstoreRecord.Longitude, bookstoreRecord.Latitude])
