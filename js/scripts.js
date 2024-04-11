@@ -15,23 +15,49 @@ const map = new mapboxgl.Map(mapOptions);
 const nav = new mapboxgl.NavigationControl();
 map.addControl(nav, 'top-right');
 
-// loop over the bookstoredata array to make a marker for each record
-bookstoredata.forEach(function (bookstoreRecord)
+// loop over the bookstoredata script to make a marker for each record
+bookstoredata.forEach(function (bookstoreRecord) {
 
-// create a popup to attach to the marker
-const popup = new mapboxgl.Popup({
-    offset: 24,
-    anchor: 'bottom'
-}).setText(
-    `${bookstoredata.name} located in: ${bookstoredata.location}`
-    `Emily goes here for ${bookstoredata.specialize}`
-);
+    var color
 
-// create a marker, set the coordinates, add the popup, add it to the map
-new mapboxgl.Marker({
-    scale: 0.65,
-    color: ffa500,
+    // use if statements to assign colors based on neighborhood
+    if (bookstoreRecord.location === 'Professor') {
+        color = '#8dd6a1'
+    }
+    if (bookstoreRecord.location === 'Cobble Hill') {
+        color = '#d67ea6'
+    }
+    if (bookstoreRecord.location === 'Lower East Side') {
+        color = '#1f8f39'
+    }
+    if (bookstoreRecord.location === 'Chinatown') {
+        color = '#8f5b1f'
+    }
+    if (bookstoreRecord.location === 'Seaport') {
+        color = '#8A2BE2'
+    }
+    if (bookstoreRecord.location === 'Upper West Side') {
+        color = '#6495ED'
+    }
+    if (bookstoreRecord.location === 'Downtown Brooklyn') {
+        color = '#00008B'
+    }
+
+    // create a popup to attach to the marker
+    const popup = new mapboxgl.Popup({
+        offset: 24,
+        anchor: 'bottom'
+    }).setText(
+        `${bookstoredata.name} located in: ${bookstoredata.location}`
+            `Emily goes here for ${bookstoredata.specialize}`
+    );
+
+    // create a marker, set the coordinates, add the popup, add it to the map
+    new mapboxgl.Marker({
+        scale: 0.65,
+        color: ffa500,
+    })
+        .setLngLat([bookstoredata.longitude, bookstoredata.latitude])
+        .setPopup(popup)
+        .addTo(map);
 })
-    .setLngLat([bookstoredata.longitude, bookstoredata.latitude])
-    .setPopup(popup)
-    .addTo(map);
