@@ -42,18 +42,25 @@ bookstoredata.forEach(function (bookstoreRecord) {
     }
 
     // create a popup to attach to the marker
+
     const popup = new mapboxgl.Popup({
         offset: 24,
         anchor: 'bottom'
     }).setText(
-        `${bookstoredata.name} located in: ${bookstoredata.location}`
-            `Emily goes here for ${bookstoredata.specialize}`
+        `${bookstoredata.name} located in: ${bookstoredata.location}. Emily goes here for ${bookstoredata.specialize}`
     );
+    // const popup = new mapboxgl.Popup({
+    //     offset: 24,
+    //     anchor: 'bottom'
+    // }).setText(
+    //     `${bookstoreRecord.name} is located in: ${bookstoreRecord.location} a`
+    //         `Emily goes here for ${bookstoreRecord.specialize}`
+    // );
 
     // create a marker, set the coordinates, add the popup, add it to the map
     new mapboxgl.Marker({
         scale: 0.65,
-        color: ffa500,
+        color: color,
     })
         .setLngLat([bookstoredata.longitude, bookstoredata.latitude])
         .setPopup(popup)
