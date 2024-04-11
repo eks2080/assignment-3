@@ -47,7 +47,7 @@ bookstoredata.forEach(function (bookstoreRecord) {
         offset: 24,
         anchor: 'bottom'
     }).setText(
-        `${bookstoredata.name} located in: ${bookstoredata.location}. Emily goes here for ${bookstoredata.specialize}`
+        `${bookstoreRecord.Name} located in: ${bookstoreRecord.Location}. Emily goes here for ${bookstoreRecord.specialize}`
     );
     // const popup = new mapboxgl.Popup({
     //     offset: 24,
@@ -62,7 +62,7 @@ bookstoredata.forEach(function (bookstoreRecord) {
         scale: 0.65,
         color: color,
     })
-        .setLngLat([bookstoredata.longitude, bookstoredata.latitude])
+        .setLngLat([bookstoreRecord.Longitude, bookstoreRecord.Latitude])
         .setPopup(popup)
         .addTo(map);
 })
